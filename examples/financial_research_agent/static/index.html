@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Research Bot</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/github.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/highlight.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-chart-line"></i> Financial Research Bot</h1>
+            <p>Enter a financial topic to research and get a comprehensive report</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="query-input" placeholder="Enter a financial research query (e.g., 'Write up an analysis of Apple Inc.'s most recent quarter')">
+            <button id="search-button">Research</button>
+        </div>
+
+        <div id="loading-container" class="hidden">
+            <div class="progress-container">
+                <h2>Research Progress</h2>
+                <div id="progress-items"></div>
+            </div>
+        </div>
+
+        <div id="results-container" class="hidden">
+            <div class="tabs">
+                <button class="tab-button active" data-tab="summary">Summary</button>
+                <button class="tab-button" data-tab="report">Full Report</button>
+                <button class="tab-button" data-tab="verification">Verification</button>
+                <button class="tab-button" data-tab="follow-up">Follow-up Questions</button>
+            </div>
+            
+            <div id="summary-tab" class="tab-content active">
+                <div id="summary-content"></div>
+            </div>
+            
+            <div id="report-tab" class="tab-content">
+                <div id="report-content"></div>
+            </div>
+            
+            <div id="verification-tab" class="tab-content">
+                <div id="verification-content"></div>
+            </div>
+            
+            <div id="follow-up-tab" class="tab-content">
+                <div id="follow-up-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Powered by OpenAI Agents</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

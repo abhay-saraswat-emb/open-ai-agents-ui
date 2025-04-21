@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Customer Service</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-plane"></i> Airline Customer Service</h1>
+            <p>Chat with our virtual agents to get help with your flight</p>
+        </header>
+
+        <div class="chat-container">
+            <div class="chat-messages" id="chat-messages">
+                <div class="message system">
+                    <div class="message-content">
+                        <p>Welcome to Airline Customer Service. How can I help you today?</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="Type your message here...">
+                <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="context-panel">
+                <h3>Conversation Context</h3>
+                <div class="context-items">
+                    <div class="context-item">
+                        <span class="context-label">Passenger Name:</span>
+                        <span class="context-value" id="passenger-name">Not set</span>
+                    </div>
+                    <div class="context-item">
+                        <span class="context-label">Confirmation #:</span>
+                        <span class="context-value" id="confirmation-number">Not set</span>
+                    </div>
+                    <div class="context-item">
+                        <span class="context-label">Flight Number:</span>
+                        <span class="context-value" id="flight-number">Not set</span>
+                    </div>
+                    <div class="context-item">
+                        <span class="context-label">Seat Number:</span>
+                        <span class="context-value" id="seat-number">Not set</span>
+                    </div>
+                </div>
+                <div class="current-agent">
+                    <span class="agent-label">Current Agent:</span>
+                    <span class="agent-value" id="current-agent">Triage Agent</span>
+                </div>
+            </div>
+            
+            <div class="help-panel">
+                <h3>Help</h3>
+                <div class="help-item">
+                    <h4>Available Agents</h4>
+                    <ul>
+                        <li><strong>Triage Agent:</strong> Main agent that directs your request</li>
+                        <li><strong>FAQ Agent:</strong> Answers questions about the airline</li>
+                        <li><strong>Seat Booking Agent:</strong> Helps you change your seat</li>
+                    </ul>
+                </div>
+                <div class="help-item">
+                    <h4>Example Questions</h4>
+                    <ul>
+                        <li>"What is your baggage policy?"</li>
+                        <li>"How many seats are on the plane?"</li>
+                        <li>"I want to change my seat"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Powered by OpenAI Agents</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
